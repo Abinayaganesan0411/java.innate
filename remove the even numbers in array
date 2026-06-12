@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class RemoveEvenArrayList {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        Iterator<Integer> it = list.iterator();
+
+        while (it.hasNext()) {
+            int num = it.next();
+            if (num % 2 == 0) {
+                it.remove();
+            }
+        }
+
+        System.out.println("Remaining elements (odd numbers):");
+        System.out.println(list);
+
+        sc.close();
+    }
+}
