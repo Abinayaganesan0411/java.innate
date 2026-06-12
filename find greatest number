@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class MaxDigitArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String input = scanner.next();
+        char[] digits = input.toCharArray();
+        char maxDigit = digits[0];
+        for (int i = 1; i < digits.length; i++) {
+            if (Character.isDigit(digits[i]) && digits[i] > maxDigit) {
+                maxDigit = digits[i];
+            }
+        }
+        System.out.println("The largest digit is: " + maxDigit);
+        scanner.close();
+    }
+}
