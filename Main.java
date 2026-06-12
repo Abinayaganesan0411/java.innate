@@ -1,0 +1,24 @@
+public class ArrayOddEven {
+    public static void main(String[] args) {
+        // Initialize an integer array with mixed values
+        int[] numbers = {12, 23, 44, 57, 88, 91, 100};
+
+        // 1. Loop through the array to find and print even numbers
+        System.out.println("Even numbers in the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                System.out.print(numbers[i] + " ");
+            }
+        }
+        
+        System.out.println(); // Print a blank line for cleaner formatting
+
+        // 2. Loop through the array to find and print odd numbers
+        System.out.println("Odd numbers in the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 != 0) {
+                System.out.print(numbers[i] + " ");
+            }
+        }
+    }
+}
